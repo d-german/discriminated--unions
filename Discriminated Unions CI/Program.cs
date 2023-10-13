@@ -4,15 +4,13 @@ internal static class Program
 {
     private static void Main()
     {
-        var calculator = new Calculator();
-
-        var result1 = calculator.Divide(10, 2);
+        var result1 = Calculator.Divide(10, 2);
         DisplayResult(result1);
 
-        var result2 = calculator.Divide(10, 0);
+        var result2 = Calculator.Divide(10, 0);
         DisplayResult(result2);
 
-        var result3 = calculator.Divide(15, 3);
+        var result3 = Calculator.Divide(15, 3);
         DisplayResult(result3);
     }
 

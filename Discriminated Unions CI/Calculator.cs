@@ -2,7 +2,7 @@ namespace Discriminated_Unions_CI;
 
 public class Calculator
 {
-    public Maybe<double> Divide(double dividend, double divisor)
+    public static Maybe<double> Divide(double dividend, double divisor)
     {
         try
         {

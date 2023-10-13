@@ -8,7 +8,7 @@ public class Something<T> : Maybe<T>
 {
     public Something(T value)
     {
-        this.Value = value;
+        Value = value;
     }
 
     public T Value { get; init; }
@@ -22,7 +22,7 @@ public class Error<T> : Maybe<T>
 {
     public Error(Exception e)
     {
-        this.CapturedError = e;
+        CapturedError = e;
     }
 
     public Exception CapturedError { get; init; }
