@@ -3,6 +3,7 @@ namespace Discriminated_Unions_CI;
 public abstract class Maybe<T>
 {
 }
+
 public class Something<T> : Maybe<T>
 {
     public Something(T value)
