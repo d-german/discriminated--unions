@@ -11,7 +11,7 @@ public class Something<T> : Maybe<T>
         Value = value;
     }
 
-    public T Value { get; init; }
+    public T Value { get; }
 }
 
 public class Nothing<T> : Maybe<T>
@@ -25,5 +25,5 @@ public class Error<T> : Maybe<T>
         CapturedError = e;
     }
 
-    public Exception CapturedError { get; init; }
+    public Exception CapturedError { get; }
 }
