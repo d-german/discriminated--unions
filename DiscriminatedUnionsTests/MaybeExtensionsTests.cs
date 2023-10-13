@@ -17,6 +17,20 @@ public class MaybeExtensionsTests
     }
 
     [Test]
+    public void MultipleBindOperations_IncrementValue()
+    {
+        var something = new Something<int>(5);
+        var result = something
+            .Bind(Increment)
+            .Bind(Increment)
+            .Bind(Increment);
+
+        Assert.That(result, Is.TypeOf<Something<int>>());
+        var somethingResult = result as Something<int>;
+        Assert.That(somethingResult?.Value, Is.EqualTo(8));
+    }
+
+    [Test]
     public void Bind_Nothing_ReturnsNothing()
     {
         var nothing = new Nothing<int>();
