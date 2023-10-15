@@ -98,7 +98,7 @@ public class MaybeExtensionsTests
     [Test]
     public void BindRef_SomethingWithNullValue_ReturnsNothing()
     {
-        var something = new Something<string>(null);
+        var something = new Something<string>(null!);
         var result = something.BindRef(AppendWorld);
 
         Assert.That(result, Is.TypeOf<Nothing<string>>());
@@ -115,6 +115,6 @@ public class MaybeExtensionsTests
 
     private static string AppendWorld(string value)
     {
-        return value + " world";
+        return $"{value} world";
     }
 }
